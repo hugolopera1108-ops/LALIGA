@@ -1,0 +1,250 @@
+/* GLOBAL.CSS - Header y Footer FIJOS e IDÉNTICOS en todas las páginas */
+
+/* =========== HEADER FIJO =========== */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 90px; /* ALTURA FIJA */
+    display: flex;
+    align-items: center;
+}
+
+.header-main {
+    width: 100%;
+    padding: 0;
+}
+
+.header-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px; /* Misma altura que el header */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 50px; /* TAMAÑO FIJO del logo */
+    width: auto;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #FF4B44;
+    border-bottom: 3px solid #FF4B44;
+}
+
+/* =========== CONTENIDO PRINCIPAL =========== */
+.main-content {
+    margin-top: 90px; /* Mismo valor que la altura del header */
+    min-height: calc(100vh - 250px); /* Altura mínima menos header y footer */
+}
+
+/* =========== FOOTER FIJO =========== */
+.footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 40px 0 20px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo img {
+    height: 35px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.footer-links {
+    flex: 2;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-column a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #FF4B44;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footer-social a {
+    background-color: #333;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.footer-social a:hover {
+    background-color: #FF4B44;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 40px auto 0;
+    padding: 20px 30px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+.footer-bottom p {
+    margin-bottom: 5px;
+}
+
+/* =========== RESPONSIVE =========== */
+@media (max-width: 768px) {
+    .header {
+        height: 80px; /* Un poco más pequeño en móvil */
+    }
+    
+    .header-main-content {
+        height: 80px;
+        padding: 0 20px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+    
+    .main-nav a {
+        font-size: 14px;
+        gap: 5px;
+    }
+    
+    .main-content {
+        margin-top: 80px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .footer-links {
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        padding: 20px 20px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        height: 70px;
+    }
+    
+    .header-main-content {
+        height: 70px;
+        padding: 0 15px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .main-nav {
+        gap: 10px;
+    }
+    
+    .main-nav a {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+    
+    .main-content {
+        margin-top: 70px;
+    }
+}

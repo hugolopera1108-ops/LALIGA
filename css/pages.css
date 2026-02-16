@@ -1,0 +1,268 @@
+/* EQUIPOS.CSS - Solo el contenido específico de equipos */
+
+.container-equipos {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+/* Hero Section */
+.hero-equipos {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1A1A1A 0%, #333 100%);
+    border-radius: 12px;
+    color: white;
+}
+
+.hero-equipos h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #FF4B44, #FF6B66);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-equipos p {
+    font-size: 20px;
+    color: #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Filtros */
+.filtros-equipos {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.search-box input:focus {
+    border-color: #FF4B44;
+    outline: none;
+}
+
+.filtros {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filtros select {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn-reset {
+    background-color: #FF4B44;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-reset:hover {
+    background-color: #E03C36;
+}
+
+/* Grid de Equipos - 4 columnas */
+.grid-equipos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Tarjeta de Equipo */
+.tarjeta-equipo {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta-equipo:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-equipo-header {
+    height: 160px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tarjeta-equipo-header img {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain;
+}
+
+.tarjeta-equipo-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.tarjeta-equipo-content h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.tarjeta-equipo-content .ciudad {
+    color: #FF4B44;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.tarjeta-equipo-content .estadio {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.tarjeta-equipo-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.meta-item {
+    text-align: center;
+}
+
+.meta-item .label {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.meta-item .valor {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Sin resultados */
+.sin-resultados {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.sin-resultados i {
+    font-size: 60px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.sin-resultados h3 {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.sin-resultados p {
+    color: #999;
+    font-size: 16px;
+}
+
+/* Responsive para equipos */
+@media (max-width: 1200px) {
+    .grid-equipos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-equipos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-equipos h1 {
+        font-size: 36px;
+    }
+    
+    .filtros {
+        flex-direction: column;
+    }
+    
+    .filtros select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-equipos {
+        grid-template-columns: 1fr;
+    }
+    
+    .container-equipos {
+        padding: 20px 15px;
+    }
+    
+    .hero-equipos {
+        padding: 30px 15px;
+    }
+    
+    .hero-equipos h1 {
+        font-size: 32px;
+    }
+    
+    .hero-equipos p {
+        font-size: 16px;
+    }
+}
